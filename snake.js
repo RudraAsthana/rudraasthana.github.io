@@ -1,10 +1,3 @@
-// Daniel Shiffman
-// http://youtube.com/thecodingtrain
-// http://codingtra.in
-
-// Coding Challenge #115: Snake Game Redux
-// https://youtu.be/OMoVcohRgZA
-
 class Snake {
     constructor() {
         this.body = [];
@@ -60,7 +53,7 @@ class Snake {
 
     show() {
         for (let i = 0; i < this.body.length; i++) {
-        fill(0);
+        fill(139, 255, 139);
         noStroke();
         rect(this.body[i].x, this.body[i].y, 1, 1);
         }
