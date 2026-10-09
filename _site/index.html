@@ -1,155 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rudra Asthana</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- Standard Pre-built Macro: Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <script>
-        const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.setAttribute("data-theme", theme);
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="header-nav">
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Theme">
-                <!-- Lucide automatically injects the unclipped SVGs here -->
-                <i data-lucide="sun" class="sun-icon"></i>
-                <i data-lucide="moon" class="moon-icon"></i>
-            </button>
-        </div>
-        
-        <h1>Rudra Asthana</h1>
+      <div class="header-nav">
+        <button
+          onclick="toggleTheme()"
+          class="theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <!-- Lucide automatically injects the unclipped SVGs here -->
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+      </div>
 
-<p>
-  Welcome to my digital garden. I am a student, writer, and open-source
-  tinkerer. I built this space to cultivate my notes in plain text, prioritizing
-  reading comfort and clean typography over algorithmic timelines.
-</p>
+      <h1>Rudra Asthana</h1>
 
-<p>
-  My interests are scattered across a few different disciplines. I am deeply
-  interested in physics research and the logistics of climate change solutions,
-  while simultaneously exploring Indian constitutional history and modern Hindi
-  literature. On a given weekend, you will usually find me reading Khaled
-  Hosseini, exploring the financial markets on Zerodha, or volunteering as an
-  editor on Wikipedia.
-</p>
+      <p>
+        Welcome to my digital garden. I am a student, writer, and open-source
+        tinkerer. I built this space to cultivate my notes in plain text,
+        prioritizing reading comfort and clean typography over algorithmic
+        timelines.
+      </p>
 
-<h2>Projects & Hobbies</h2>
-<p>
-  I have a strong background in Model United Nations, having served
-  enthusiastically as a Director General, Vice-Chairperson, and Executive Board
-  member. I spent a significant amount of time drafting procedural frameworks
-  and background guides for various committees.
-</p>
-<p>
-  Digitally, I am passionate about Linux customization. I daily-drive Arch Linux
-  and spend time writing Bash scripts, formatting complex documents in LaTeX,
-  and experimenting with Python, Go, and C++. When I want to disconnect, I
-  usually spin up Genshin Impact, Minecraft, or Ultrakill.
-</p>
+      <p>
+        My interests are scattered across a few different disciplines. I am
+        deeply interested in physics research and the logistics of climate
+        change solutions, while simultaneously exploring Indian constitutional
+        history and modern Hindi literature. On a given weekend, you will
+        usually find me reading Khaled Hosseini, exploring the financial markets
+        on Zerodha, or volunteering as an editor on Wikipedia.
+      </p>
 
-<h2>Guides & Manuals</h2>
-<ul class="post-list">
-  
-  <li style="color: var(--subtext0); font-style: italic">
-    Manuals are currently being compiled.
-  </li>
-  
-</ul>
+      <h2>Projects & Hobbies</h2>
+      <p>
+        I have a strong background in Model United Nations, having served
+        enthusiastically as a Director General, Vice-Chairperson, and Executive
+        Board member. I spent a significant amount of time drafting procedural
+        frameworks and background guides for various committees.
+      </p>
+      <p>
+        Digitally, I am passionate about Linux customization. I daily-drive Arch
+        Linux and spend time writing Bash scripts, formatting complex documents
+        in LaTeX, and experimenting with Python, Go, and C++. When I want to
+        disconnect, I usually spin up Genshin Impact, Minecraft, or Ultrakill.
+      </p>
 
-<h2>Blog & Reflections</h2>
-<ul class="post-list">
-  
-  <li style="color: var(--subtext0); font-style: italic">
-    No logs published yet.
-  </li>
-  
-</ul>
+      <h2>Guides & Manuals</h2>
+      <ul class="post-list">
+        <li>
+          <span class="post-meta">2026-10-10</span>
+          <a href="/guide/2026/10/10/latex-fedora-workflow.html"
+            >Minimalist LaTeX Typesetting on Fedora Workstation</a
+          >
+        </li>
+      </ul>
 
-<hr
-  style="
-    border: 0;
-    border-top: 1px solid var(--surface0);
-    margin: 4rem 0 2rem 0;
-  "
-/>
+      <h2>Blog & Reflections</h2>
+      <ul class="post-list">
+        <li>
+          <span class="post-meta">2026-10-10</span>
+          <a href="/blog/2026/10/10/mock-scores-and-reading.html"
+            >Balancing Mock Scores and Fiction</a
+          >
+        </li>
+      </ul>
 
-<ul class="social-links">
-  <li>
-    <a href="https://github.com/RudraAsthana" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-        />
-      </svg>
-      GitHub
-    </a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/rudraasthana" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-        />
-      </svg>
-      LinkedIn
-    </a>
-  </li>
-  <li>
-    <a href="https://mastodon.social/@rudraasthana" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M23.268 5.313c-.35-2.583-2.617-4.135-5.338-4.595-1.579-.267-3.864-.326-5.93-.326-2.066 0-4.351.059-5.93.326-2.721.46-4.988 2.012-5.338 4.595-.121.892-.206 1.94-.252 3.125-.098 2.502-.02 5.025.26 7.498.423 3.738 3.518 5.378 7.228 5.626 2.083.14 4.316.035 6.008-.344.113-.025.22-.054.321-.086v-3.32c-1.748.514-3.86.643-5.748.452-2.427-.246-2.865-1.844-2.955-2.593-.016-.135-.027-.272-.032-.411 2.37.495 5.344.646 8.536.43 1.928-.13 3.824-.486 5.568-1.047 1.838-.592 3.018-1.928 3.255-3.856.126-1.026.22-2.115.26-3.238.082-2.316.046-4.63-.143-6.914M9.664 13.916V8.163c0-1.427.674-2.155 2.023-2.155 1.408 0 2.112.793 2.112 2.378v3.428h1.222V8.386c0-1.585.704-2.378 2.112-2.378 1.349 0 2.023.728 2.023 2.155v5.753h1.492V8.04c0-1.378-.45-2.433-1.35-3.167-.9-.733-2.006-1.1-3.315-1.1-1.611 0-2.846.602-3.702 1.805-.856-1.203-2.091-1.805-3.702-1.805-1.309 0-2.415.367-3.315 1.1-.9.734-1.35 1.789-1.35 3.167v5.876h1.492z"
-        />
-      </svg>
-      Mastodon
-    </a>
-  </li>
-  <li>
-    <a href="gemini://rudraasthana.gemcities.com">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm4-9H8v-2h8v2z"
-        />
-      </svg>
-      Gemini Capsule
-    </a>
-  </li>
-  <li>
-    <a href="https://rudraasthana.substack.com" target="_blank">
-      <svg viewBox="0 0 24 24">
-        <path
-          d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"
-        />
-      </svg>
-      Substack
-    </a>
-  </li>
-</ul>
+      <hr
+        style="
+          border: 0;
+          border-top: 1px solid var(--surface0);
+          margin: 4rem 0 2rem 0;
+        "
+      />
 
-<p class="location-tag">Lucknow, India</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/RudraAsthana" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/rudraasthana" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://mastodon.social/@rudraasthana" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.268 5.313c-.35-2.583-2.617-4.135-5.338-4.595-1.579-.267-3.864-.326-5.93-.326-2.066 0-4.351.059-5.93.326-2.721.46-4.988 2.012-5.338 4.595-.121.892-.206 1.94-.252 3.125-.098 2.502-.02 5.025.26 7.498.423 3.738 3.518 5.378 7.228 5.626 2.083.14 4.316.035 6.008-.344.113-.025.22-.054.321-.086v-3.32c-1.748.514-3.86.643-5.748.452-2.427-.246-2.865-1.844-2.955-2.593-.016-.135-.027-.272-.032-.411 2.37.495 5.344.646 8.536.43 1.928-.13 3.824-.486 5.568-1.047 1.838-.592 3.018-1.928 3.255-3.856.126-1.026.22-2.115.26-3.238.082-2.316.046-4.63-.143-6.914M9.664 13.916V8.163c0-1.427.674-2.155 2.023-2.155 1.408 0 2.112.793 2.112 2.378v3.428h1.222V8.386c0-1.585.704-2.378 2.112-2.378 1.349 0 2.023.728 2.023 2.155v5.753h1.492V8.04c0-1.378-.45-2.433-1.35-3.167-.9-.733-2.006-1.1-3.315-1.1-1.611 0-2.846.602-3.702 1.805-.856-1.203-2.091-1.805-3.702-1.805-1.309 0-2.415.367-3.315 1.1-.9.734-1.35 1.789-1.35 3.167v5.876h1.492z"
+              />
+            </svg>
+            Mastodon
+          </a>
+        </li>
+        <li>
+          <a href="gemini://rudraasthana.gemcities.com">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm4-9H8v-2h8v2z"
+              />
+            </svg>
+            Gemini Capsule
+          </a>
+        </li>
+        <li>
+          <a href="https://rudraasthana.substack.com" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"
+              />
+            </svg>
+            Substack
+          </a>
+        </li>
+      </ul>
 
-        
+      <p class="location-tag">Lucknow, India</p>
     </main>
 
     <script>
-        // Initialize the icons safely
-        lucide.createIcons();
+      // Initialize the icons safely
+      lucide.createIcons();
 
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        }
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      }
     </script>
-</body>
+  </body>
 </html>

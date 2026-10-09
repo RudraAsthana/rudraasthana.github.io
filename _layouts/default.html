@@ -1,44 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
-    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
-    
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ '/favicon.svg' | relative_url }}"
+    />
+
     <!-- Standard Pre-built Macro: Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <script>
-        const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.setAttribute("data-theme", theme);
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="header-nav">
-            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Theme">
-                <!-- Lucide automatically injects the unclipped SVGs here -->
-                <i data-lucide="sun" class="sun-icon"></i>
-                <i data-lucide="moon" class="moon-icon"></i>
-            </button>
-        </div>
-        
-        {{ content }}
-        
+      <div class="header-nav">
+        <button
+          onclick="toggleTheme()"
+          class="theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <!-- Lucide automatically injects the unclipped SVGs here -->
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+      </div>
+
+      {{ content }}
     </main>
 
     <script>
-        // Initialize the icons safely
-        lucide.createIcons();
+      // Initialize the icons safely
+      lucide.createIcons();
 
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        }
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      }
     </script>
-</body>
+  </body>
 </html>

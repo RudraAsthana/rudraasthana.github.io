@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist LaTeX Typesetting on Fedora Workstation</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Standard Pre-built Macro: Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="header-nav">
+        <button
+          onclick="toggleTheme()"
+          class="theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <!-- Lucide automatically injects the unclipped SVGs here -->
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+      </div>
+
+      <h1 id="minimalist-latex-typesetting-on-fedora-workstation">
+        Minimalist LaTeX Typesetting on Fedora Workstation
+      </h1>
+
+      <p>
+        This is a quick reference manual for setting up a clean,
+        distraction-free LaTeX environment on Fedora. Heavy IDEs are unnecessary
+        when you can achieve perfect typesetting with a minimal terminal
+        workflow.
+      </p>
+
+      <h3 id="1-installation">1. Installation</h3>
+
+      <p>
+        Grab the core packages using
+        <code class="language-plaintext highlighter-rouge">dnf</code>. You do
+        not need the full TeX Live distribution (which is massive) if you only
+        want the essentials.
+      </p>
+
+      <div class="language-bash highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="nb">sudo </span>dnf <span class="nb">install </span>texlive-scheme-basic texlive-collection-latex texlive-collection-fontsrecommended
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="2-standard-preamble">2. Standard Preamble</h3>
+
+      <p>
+        I use this preamble for almost all my study manuals and procedural
+        frameworks. It implements the TeX Gyre Bonum font and utilizes
+        <code class="language-plaintext highlighter-rouge">parskip</code> for
+        cleaner paragraph spacing without automatic indentation.
+      </p>
+
+      <div class="language-latex highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">\documentclass</span><span class="na">[11pt, a4paper]</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>geometry<span class="p">}</span>
+<span class="k">\geometry</span><span class="p">{</span>margin=1in<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>parskip<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>enumitem<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>tgbonum<span class="p">}</span> <span class="c">% TeX Gyre Bonum font</span>
+
+<span class="nt">\begin{document}</span>
+<span class="c">% Your content here</span>
+<span class="nt">\end{document}</span>
+</code></pre>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Initialize the icons safely
+      lucide.createIcons();
+
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      }
+    </script>
+  </body>
+</html>
