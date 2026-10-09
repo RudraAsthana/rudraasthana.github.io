@@ -19,7 +19,7 @@ You can download the compiled PDF below. Be sure to move `main.pdf` into your `a
             <i data-lucide="download"></i> Download PDF
         </a>
     </div>
-    <img src="{{ '/assets/img/main-thumb.jpg' | relative_url }}" class="document-thumbnail" alt="DPSS MUN Proposal Thumbnail">
+    <img src="{{ '/assets/img/main.jpg' | relative_url }}" class="document-thumbnail" alt="DPSS MUN Proposal Thumbnail">
 </div>
 
 [^1]: Typesetting this in LaTeX was essential to cleanly format the complex decision matrices, risk registers, and algorithmic parameter sheets while maintaining a strict academic aesthetic.
