@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <!-- Bulletproof paths for GitHub Pages -->
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ '/favicon.svg' | relative_url }}"
+    />
     <script>
-      // Check local storage or system preference instantly to prevent flash
       const theme =
         localStorage.getItem("theme") ||
         (window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -23,7 +28,6 @@
           class="theme-toggle"
           aria-label="Toggle Theme"
         >
-          <!-- Sun Icon (Fixed ViewBox to prevent clipping) -->
           <svg
             class="sun-icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +50,6 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line>
           </svg>
-          <!-- Moon Icon -->
           <svg
             class="moon-icon"
             xmlns="http://www.w3.org/2000/svg"
