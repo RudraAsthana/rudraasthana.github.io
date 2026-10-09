@@ -350,3 +350,12 @@ sup a:hover {
   border: 1px solid var(--surface0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Enforce larger thumbnail and prevent flexbox crushing */
+.document-thumbnail {
+  width: 140px !important;
+  height: 198px !important;
+  min-width: 140px;
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+}
