@@ -6,10 +6,7 @@
     <title>Balancing Mock Scores and Fiction</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <!-- Standard Pre-built Macro: Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <script>
       const theme =
         localStorage.getItem("theme") ||
@@ -27,7 +24,6 @@
           class="theme-toggle"
           aria-label="Toggle Theme"
         >
-          <!-- Lucide automatically injects the unclipped SVGs here -->
           <i data-lucide="sun" class="sun-icon"></i>
           <i data-lucide="moon" class="moon-icon"></i>
         </button>
@@ -53,12 +49,41 @@
         exams. It is a necessary reset before diving back into Indian
         constitutional history tomorrow.
       </p>
+
+      <footer
+        style="
+          margin-top: 4rem;
+          padding-top: 2rem;
+          border-top: 1px solid var(--surface0);
+          font-size: 0.85em;
+          color: var(--subtext0);
+          text-align: center;
+          line-height: 1.5;
+        "
+      >
+        <p>
+          Site infrastructure and code are licensed under
+          <a
+            href="https://www.gnu.org/licenses/gpl-3.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GPLv3</a
+          >.
+        </p>
+        <p>
+          All written content and logs are licensed under
+          <a
+            href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CC BY-NC-ND 4.0</a
+          >.
+        </p>
+      </footer>
     </main>
 
     <script>
-      // Initialize the icons safely
       lucide.createIcons();
-
       function toggleTheme() {
         const current = document.documentElement.getAttribute("data-theme");
         const next = current === "dark" ? "light" : "dark";

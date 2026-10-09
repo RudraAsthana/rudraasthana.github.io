@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Architecture of Constitutions</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="header-nav">
+        <button
+          onclick="toggleTheme()"
+          class="theme-toggle"
+          aria-label="Toggle Theme"
+        >
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+      </div>
+
+      <h1 id="the-architecture-of-constitutions">
+        The Architecture of Constitutions
+      </h1>
+
+      <p>
+        When analyzing global democratic systems, the divergence between
+        codified and uncodified constitutions represents a fundamental
+        difference in how nations view the limitation of state power.
+      </p>
+
+      <p>
+        The United Kingdom operates on an “unwritten” or uncodified
+        constitution, which is not a single, unified document but rather an
+        amalgamation of statutes, common law, and parliamentary conventions.<sup
+          id="fnref:1"
+          ><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref"
+            >1</a
+          ></sup
+        >
+        In contrast, the United States Constitution is famously concise, laying
+        out a rigid structural framework without attempting to codify every
+        conceivable legal ambiguity.
+      </p>
+
+      <p>
+        India took a vastly different approach. The drafters of the Indian
+        Constitution sought to proactively settle political, social, and
+        administrative issues directly within the text to prevent future
+        volatility in a newly independent and highly diverse nation.<sup
+          id="fnref:2"
+          ><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref"
+            >2</a
+          ></sup
+        >
+      </p>
+
+      <blockquote>
+        <p>
+          “The Constitution was to foster the achievement of many goals.
+          Transcendent among them was that of social revolution. Through this
+          revolution would be fulfilled the basic needs of the common man, and,
+          it was hoped, this revolution would bring about fundamental changes in
+          the structure of Indian society.”<sup id="fnref:3"
+            ><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref"
+              >3</a
+            ></sup
+          >
+        </p>
+      </blockquote>
+
+      <p>
+        This exhaustive detailing is precisely why it remains the longest
+        written constitution of any sovereign nation in the world. Instead of
+        leaving administrative mechanics to future legislative bodies, the
+        framers embedded them directly into the fundamental law of the land.
+      </p>
+
+      <div class="footnotes" role="doc-endnotes">
+        <ol>
+          <li id="fn:1">
+            <p>
+              This does not mean the UK lacks constitutional law entirely;
+              documents like the Magna Carta (1215) and the Bill of Rights
+              (1689) form its historical backbone. <a
+                href="#fnref:1"
+                class="reversefootnote"
+                role="doc-backlink"
+                >&#8617;</a
+              >
+            </p>
+          </li>
+          <li id="fn:2">
+            <p>
+              The original text contained 395 articles in 22 parts and 8
+              schedules, drafted over a period of 2 years, 11 months, and 18
+              days. <a
+                href="#fnref:2"
+                class="reversefootnote"
+                role="doc-backlink"
+                >&#8617;</a
+              >
+            </p>
+          </li>
+          <li id="fn:3">
+            <p>
+              Austin, Granville.
+              <em>The Indian Constitution: Cornerstone of a Nation</em>. Oxford
+              University Press, 1966, p. 50. <a
+                href="#fnref:3"
+                class="reversefootnote"
+                role="doc-backlink"
+                >&#8617;</a
+              >
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <footer
+        style="
+          margin-top: 4rem;
+          padding-top: 2rem;
+          border-top: 1px solid var(--surface0);
+          font-size: 0.85em;
+          color: var(--subtext0);
+          text-align: center;
+          line-height: 1.5;
+        "
+      >
+        <p>
+          Site infrastructure and code are licensed under
+          <a
+            href="https://www.gnu.org/licenses/gpl-3.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GPLv3</a
+          >.
+        </p>
+        <p>
+          All written content and logs are licensed under
+          <a
+            href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CC BY-NC-ND 4.0</a
+          >.
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      lucide.createIcons();
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+      }
+    </script>
+  </body>
+</html>
