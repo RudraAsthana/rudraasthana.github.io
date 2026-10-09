@@ -27,6 +27,16 @@
   <body>
     <main>
       <div class="header-nav">
+        <!-- Liquid Logic: Only show 'Home' if NOT on the homepage -->
+        {% if page.url != '/' and page.url != '/index.html' %}
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <i data-lucide="arrow-left"></i> Home
+        </a>
+        {% else %}
+        <div></div>
+        <!-- Empty div to keep the theme toggle pushed to the right -->
+        {% endif %}
+
         <button
           onclick="toggleTheme()"
           class="theme-toggle"

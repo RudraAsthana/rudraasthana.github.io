@@ -65,7 +65,8 @@ main {
 /* Theme Toggle Button */
 .header-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -357,4 +358,24 @@ sup a:hover {
   border-radius: 8px;
   border: 1px solid var(--surface0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Links */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--subtext0);
+  text-decoration: none;
+  border: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--sapphire);
+  border: none;
+}
+.nav-link svg {
+  width: 18px;
+  height: 18px;
 }
