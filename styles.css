@@ -301,3 +301,52 @@ sup a:hover {
   margin-top: 4rem;
   font-style: italic;
 }
+
+/* Document Download Cards */
+.document-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mantle);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--surface0);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.document-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.document-filename {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+  color: var(--text);
+}
+.document-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--sapphire);
+  border: none;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.document-download:hover {
+  color: var(--blue);
+  border: none;
+}
+.document-download svg {
+  width: 18px;
+  height: 18px;
+}
+.document-thumbnail {
+  width: 90px;
+  height: 127px; /* Standard A4 aspect ratio */
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--surface0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

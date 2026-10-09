@@ -34,6 +34,20 @@ title: Rudra Asthana
   usually spin up Genshin Impact, Minecraft, or Ultrakill.
 </p>
 
+<h2>Typeset Documents</h2>
+<ul class="post-list">
+  {% for post in site.categories.typeset %}
+  <li>
+    <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% else %}
+  <li style="color: var(--subtext0); font-style: italic">
+    No documents uploaded yet.
+  </li>
+  {% endfor %}
+</ul>
+
 <h2>Guides & Manuals</h2>
 <ul class="post-list">
   {% for post in site.categories.guide %}
