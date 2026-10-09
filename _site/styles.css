@@ -186,10 +186,11 @@ pre {
   background-color: var(--mantle);
   padding: 1.5rem;
   border-radius: 8px;
-  overflow-x: auto;
   margin: 2rem 0;
   border: 1px solid var(--surface0);
   line-height: 1.6;
+  white-space: pre-wrap; /* Forces text to wrap to the next line */
+  word-wrap: break-word; /* Prevents long strings from breaking out */
 }
 pre code {
   background-color: transparent;
