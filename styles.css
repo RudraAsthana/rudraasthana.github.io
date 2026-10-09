@@ -1,35 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap");
 
-/* Catppuccin Latte (Light Mode Default) */
+/* High-Contrast Crisp Light Theme */
 :root {
-  --crust: #dce0e8;
-  --mantle: #e6e9ef;
-  --base: #eff1f5;
-  --text: #4c4f69;
-  --subtext0: #6c6f85;
-  --surface0: #ccd0da;
-  --lavender: #7287fd;
-  --blue: #1e66f5;
-  --sapphire: #209fb5;
-  --maroon: #e64553;
-  --mauve: #8839ef;
-  --rosewater: #dc8a78;
+  --crust: #e5e7eb;
+  --mantle: #f3f4f6; /* Code blocks, cards */
+  --base: #ffffff; /* Main background */
+  --text: #111827; /* Near black */
+  --subtext0: #4b5563; /* Legible dark gray */
+  --surface0: #d1d5db; /* Borders */
+  --lavender: #4338ca; /* Deep indigo for H3 */
+  --blue: #2563eb; /* Strong blue hover */
+  --sapphire: #1d4ed8; /* Link blue */
+  --maroon: #b91c1c; /* Deep crimson for quotes */
+  --mauve: #6d28d9; /* Deep purple for H2 */
+  --rosewater: #be123c; /* Deep rose for H1 */
 }
 
-/* Catppuccin Mocha (Dark Mode) */
+/* High-Contrast Deep Dark Theme */
 [data-theme="dark"] {
-  --crust: #11111b;
-  --mantle: #181825;
-  --base: #1e1e2e;
-  --text: #cdd6f4;
-  --subtext0: #a6adc8;
-  --surface0: #313244;
-  --lavender: #b4befe;
-  --blue: #89b4fa;
-  --sapphire: #74c7ec;
-  --maroon: #eba0ac;
-  --mauve: #cba6f7;
-  --rosewater: #f5e0dc;
+  --crust: #030712;
+  --mantle: #111827;
+  --base: #0a0a0a; /* Pure deep slate/black */
+  --text: #f9fafb; /* Crisp off-white */
+  --subtext0: #9ca3af;
+  --surface0: #374151;
+  --lavender: #a5b4fc;
+  --blue: #60a5fa;
+  --sapphire: #3b82f6;
+  --maroon: #f87171;
+  --mauve: #c084fc;
+  --rosewater: #fb7185;
 }
 
 body {
@@ -247,7 +247,7 @@ sup a:hover {
   color: var(--sapphire);
   font-size: 0.9em;
   margin-left: 0.5em;
-  font-family: "JetBrains Mono", monospace; /* Stylizes the return arrow */
+  font-family: "JetBrains Mono", monospace;
 }
 .reversefootnote:hover {
   color: var(--rosewater);
@@ -313,16 +313,22 @@ sup a:hover {
   border: 1px solid var(--surface0);
   margin-top: 2rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 .document-info {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  flex: 1 1 200px;
+  min-width: 0;
 }
 .document-filename {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9em;
   color: var(--text);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .document-download {
   display: inline-flex;
@@ -343,41 +349,12 @@ sup a:hover {
   height: 18px;
 }
 .document-thumbnail {
-  width: 130px;
-  height: 184px; /* Standard A4 aspect ratio */
+  width: 220px;
+  height: 311px;
+  min-width: 220px;
+  flex-shrink: 0;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid var(--surface0);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Enforce larger thumbnail and prevent flexbox crushing */
-.document-thumbnail {
-  width: 140px !important;
-  height: 198px !important;
-  min-width: 140px;
-  flex-shrink: 0;
-  margin-left: 1.5rem;
-}
-
-/* Update: Enlarge Thumbnail & Enable Responsive Text Wrapping */
-.document-card {
-  flex-wrap: wrap !important;
-  gap: 1.5rem !important;
-}
-.document-info {
-  flex: 1 1 200px !important;
-  min-width: 0 !important;
-}
-.document-filename {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-}
-.document-thumbnail {
-  width: 220px !important;
-  height: 311px !important;
-  min-width: 220px !important;
-  flex-shrink: 0 !important;
-  margin-left: 0 !important;
-  border-radius: 8px !important;
 }
