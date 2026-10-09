@@ -1,0 +1,108 @@
+/* Import Instrument Sans and Instrument Serif from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+    /* Catppuccin Mocha Palette */
+    --crust: #11111b;
+    --mantle: #181825;
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --subtext0: #a6adc8;
+    --surface0: #313244;
+    --lavender: #b4befe;
+    --blue: #89b4fa;
+    --sapphire: #74c7ec;
+    --maroon: #eba0ac;
+    --mauve: #cba6f7;
+    --rosewater: #f5e0dc;
+}
+
+body {
+    background-color: var(--base);
+    color: var(--text);
+    font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(1.05rem, 1vw + 0.9rem, 1.2rem);
+    line-height: 1.75;
+    margin: 0;
+    padding: 4rem 1.5rem;
+    display: grid;
+    /* 50ch limits horizontal width to mimic old texts */
+    grid-template-columns: 1fr min(50ch, 100%) 1fr;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "onum" 1; 
+}
+
+main {
+    grid-column: 2;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    color: var(--lavender);
+    text-wrap: balance;
+    margin-top: 2.5em;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: clamp(3rem, 5vw + 2rem, 4.5rem);
+    margin-top: 0;
+    line-height: 1.1;
+    color: var(--rosewater);
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-style: italic;
+    border-bottom: 1px solid var(--surface0);
+    padding-bottom: 0.3em;
+    color: var(--mauve);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    hyphens: auto; 
+}
+
+a {
+    color: var(--sapphire);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--sapphire);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+    color: var(--blue);
+    border-bottom-style: solid;
+}
+
+blockquote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--maroon);
+    background: var(--mantle);
+    color: var(--subtext0);
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.1em;
+}
+
+ul {
+    padding-left: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+li {
+    margin-bottom: 0.6em;
+}
+
+li::marker {
+    color: var(--surface0);
+}

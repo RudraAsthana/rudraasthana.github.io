@@ -1,0 +1,26 @@
+---
+layout: default
+title: Rudra Asthana
+---
+
+<h1>Rudra Asthana</h1>
+
+<p>Welcome to my digital garden on the small web. This site is typeset to prioritize reading comfort, rejecting heavy scripts in favor of semantic markup and clean typography.</p>
+
+<p>I am currently taking a drop year to focus entirely on competitive law entrance examinations. My primary objective is mastering the curriculum for CLAT and AILET, with the goal of securing admission to the National Law University Delhi (NLUD).</p>
+
+<h2>Current Pursuits</h2>
+<ul>
+    <li><b>Law & Policy:</b> Preparing for NLUD and studying constitutional history.</li>
+    <li><b>Computing:</b> Customizing my Linux environments and writing bash scripts.</li>
+</ul>
+
+<h2>Recent Posts</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span> : 
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
