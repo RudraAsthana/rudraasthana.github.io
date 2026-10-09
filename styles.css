@@ -359,3 +359,25 @@ sup a:hover {
   flex-shrink: 0;
   margin-left: 1.5rem;
 }
+
+/* Update: Enlarge Thumbnail & Enable Responsive Text Wrapping */
+.document-card {
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+}
+.document-info {
+  flex: 1 1 200px !important;
+  min-width: 0 !important;
+}
+.document-filename {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+.document-thumbnail {
+  width: 220px !important;
+  height: 311px !important;
+  min-width: 220px !important;
+  flex-shrink: 0 !important;
+  margin-left: 0 !important;
+  border-radius: 8px !important;
+}
