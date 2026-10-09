@@ -189,13 +189,69 @@ pre {
   margin: 2rem 0;
   border: 1px solid var(--surface0);
   line-height: 1.6;
-  white-space: pre-wrap; /* Forces text to wrap to the next line */
-  word-wrap: break-word; /* Prevents long strings from breaking out */
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 pre code {
   background-color: transparent;
   padding: 0;
   color: var(--text);
+}
+
+/* Footnotes & Citations */
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+}
+sup a {
+  text-decoration: none;
+  border: none;
+  color: var(--mauve);
+  padding: 0 0.1em;
+  transition: color 0.2s ease;
+}
+sup a:hover {
+  color: var(--maroon);
+  border: none;
+}
+
+.footnotes {
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--surface0);
+  font-size: 0.9em;
+  color: var(--subtext0);
+}
+.footnotes p {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+.footnotes ol {
+  padding-left: 1.5em;
+}
+.footnotes li {
+  margin-bottom: 0.8em;
+}
+.footnotes li:target {
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.reversefootnote {
+  text-decoration: none;
+  border: none;
+  color: var(--sapphire);
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  font-family: "JetBrains Mono", monospace; /* Stylizes the return arrow */
+}
+.reversefootnote:hover {
+  color: var(--rosewater);
+  border: none;
 }
 
 /* Lists & Links */

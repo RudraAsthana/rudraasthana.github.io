@@ -15,9 +15,9 @@ rudraasthana.github.io/
 │   └── default.html         # Master template with theme toggle & footer
 ├── _posts/
 │   ├── blog/
-│   │   └── YYYY-MM-DD-title.md  ( * as many logs as published * )
+│   │   └── YYYY-MM-DD-title.md
 │   └── guide/
-│       └── YYYY-MM-DD-title.md  ( * as many manuals as published * )
+│       └── YYYY-MM-DD-title.md
 ├── _config.yml              # Jekyll settings & timezone enforcement
 ├── favicon.svg              # 16x16 Pixel Art
 ├── index.html               # Homepage with dynamic category routing
@@ -42,31 +42,23 @@ category: blog # or "guide"
 ---
 ```
 
-Write your content directly below the second `---` using standard Markdown.
+### 2. Adding Footnotes & Citations
 
-### 2. Format the Code (Optional but Recommended)
+Use Kramdown's native footnote syntax. Add `[^1]` inline where you want the number to appear.
+Then, at the very bottom of your markdown file, define the footnote content:
 
-Run Prettier to ensure all markdown spacing, HTML indentation, and CSS syntax remain perfectly formatted:
+```markdown
+Here is a factual claim.[^1]
+
+[^1]: This is the citation or expanded thought.
+```
+
+The site will automatically generate a styled horizontal separator and two-way clickable links before the licensing footer.
+
+### 3. Deploy to GitHub Pages
 
 ```bash
 npx prettier --write "**/*.{html,css,md,yml}"
-```
-
-### 3. Test Locally
-
-Preview the changes on your Fedora environment before pushing to the live site:
-
-```bash
-jekyll serve
-```
-
-_(If port 4000 is blocked, append `--port 4001`)._
-
-### 4. Deploy to GitHub Pages
-
-Push the new markdown files to the repository. GitHub Actions will automatically detect the push, compile the Jekyll site, and update the live domain within 60 seconds.
-
-```bash
 git add .
 git commit -m "Publish: [Post Title]"
 git push
