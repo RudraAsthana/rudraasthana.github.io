@@ -379,3 +379,23 @@ sup a:hover {
   width: 18px;
   height: 18px;
 }
+
+/* Fix: Header Navigation & Home Button Aesthetics */
+.header-nav {
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.nav-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important; /* Increases space between arrow and text */
+  border-bottom: none !important; /* Removes the dotted hyperlink underline */
+  line-height: 1 !important; /* Forces strict vertical centering */
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  border-bottom: none !important; /* Prevents underline from appearing on hover */
+  color: var(--sapphire) !important;
+}
