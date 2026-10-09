@@ -49,7 +49,7 @@ For LaTeX or PDF documents, the site uses a custom Document Card component for c
 1. Place your compiled PDF into the `assets/pdf/` directory.
 2. Generate a thumbnail of the first page using Ghostscript:
    ```bash
-   \gs -o assets/img/your_file-thumb.jpg -sDEVICE=jpeg -r150 -dFirstPage=1 -dLastPage=1 assets/pdf/your_file.pdf
+   \gs -o assets/img/your_file-thumb.jpg -sDEVICE=jpeg -dJPEGQ=85 -r150 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dFirstPage=1 -dLastPage=1 assets/pdf/your_file.pdf
    ```
    _(Note: The backslash `\` ensures Zsh does not mistake `gs` for `git status`)._
 3. Create a post in `_posts/typeset/` using the standard naming convention, setting the front matter to `category: typeset`.
