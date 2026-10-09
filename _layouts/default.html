@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/styles.css">
+    <script>
+        // Check local storage or system preference instantly
+        const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
 </head>
 <body>
     <main>
+        <div class="header-nav">
+            <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+        </div>
+        
         {{ content }}
+        
     </main>
+
+    <script>
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+    </script>
 </body>
 </html>
