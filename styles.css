@@ -399,3 +399,25 @@ sup a:hover {
   border-bottom: none !important; /* Prevents underline from appearing on hover */
   color: var(--sapphire) !important;
 }
+
+/* Post Header & Date Formatting */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+.post-title {
+  margin-bottom: 0.2em; /* Pulls the date close to the title */
+}
+.post-date {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+  color: var(--subtext0);
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.post-date svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.8;
+}

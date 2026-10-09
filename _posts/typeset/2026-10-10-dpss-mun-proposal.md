@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: post
 title: "DPSS MUN: First Interschool Edition Proposal"
 category: typeset
 ---
-
-# DPSS MUN: First Interschool Edition Proposal
 
 Drafting a comprehensive structural framework for a Model United Nations conference requires meticulous attention to detail. This document serves as the official Proposal and Letter of Patronage for the inaugural interschool edition of DPSS MUN.
 

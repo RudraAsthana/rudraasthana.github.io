@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: post
 title: "Balancing Mock Scores and Fiction"
 category: blog
 ---
-
-# Balancing Mock Scores and Fiction
 
 Taking a drop year requires a specific kind of pacing. I spent the morning reviewing my latest CLAT mock scores and digging into the legal reasoning sections. The sheer volume of current affairs can feel overwhelming, but keeping the ultimate goal of NLUD in focus helps maintain momentum.
 

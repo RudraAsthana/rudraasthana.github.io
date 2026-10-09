@@ -36,7 +36,7 @@ Create a new Markdown file inside `_posts/blog/` or `_posts/guide/` using the `Y
 
 ```yaml
 ---
-layout: default
+layout: post
 title: "Your Post Title Here"
 category: blog # or "guide"
 ---

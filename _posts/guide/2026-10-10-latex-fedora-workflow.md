@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: post
 title: "Minimalist LaTeX Typesetting on Fedora Workstation"
 category: guide
 ---
-
-# Minimalist LaTeX Typesetting on Fedora Workstation
 
 This is a quick reference manual for setting up a clean, distraction-free LaTeX environment on Fedora. Heavy IDEs are unnecessary when you can achieve perfect typesetting with a minimal terminal workflow.
 

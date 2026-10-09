@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: post
 title: "The Architecture of Constitutions"
 category: blog
 ---
-
-# The Architecture of Constitutions
 
 When analyzing global democratic systems, the divergence between codified and uncodified constitutions represents a fundamental difference in how nations view the limitation of state power.
 
