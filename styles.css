@@ -343,8 +343,8 @@ sup a:hover {
   height: 18px;
 }
 .document-thumbnail {
-  width: 90px;
-  height: 127px; /* Standard A4 aspect ratio */
+  width: 130px;
+  height: 184px; /* Standard A4 aspect ratio */
   object-fit: cover;
   border-radius: 4px;
   border: 1px solid var(--surface0);
