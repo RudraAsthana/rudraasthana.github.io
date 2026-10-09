@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap");
 
 /* Catppuccin Latte (Light Mode Default) */
 :root {
@@ -100,6 +100,7 @@ main {
   display: none;
 }
 
+/* Typography */
 h1,
 h2,
 h3 {
@@ -123,6 +124,12 @@ h2 {
   border-bottom: 1px solid var(--surface0);
   padding-bottom: 0.3em;
   color: var(--mauve);
+}
+h3 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
 p {
@@ -163,6 +170,34 @@ li::marker {
   color: var(--surface0);
 }
 
+/* Monospaced Code Blocks */
+code,
+pre {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85em;
+}
+code {
+  background-color: var(--mantle);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--sapphire);
+}
+pre {
+  background-color: var(--mantle);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--surface0);
+  line-height: 1.6;
+}
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: var(--text);
+}
+
+/* Lists & Links */
 .post-list {
   list-style: none;
   padding: 0;
@@ -175,7 +210,6 @@ li::marker {
   margin-right: 1rem;
   font-variant-numeric: tabular-nums;
 }
-
 .social-links {
   list-style: none;
   padding: 0;
