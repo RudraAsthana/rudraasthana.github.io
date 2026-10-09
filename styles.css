@@ -421,3 +421,21 @@ sup a:hover {
   height: 14px;
   opacity: 0.8;
 }
+
+/* Subtle Date & Divider Update */
+.post-date {
+  display: block !important;
+  font-family: inherit !important;
+  font-size: 0.85em !important;
+  color: var(--subtext0) !important;
+  font-style: italic !important;
+  opacity: 0.75 !important;
+  letter-spacing: 0.02em !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+.post-divider {
+  border: 0;
+  border-top: 1px solid var(--surface0);
+  margin: 2rem 0 2.5rem 0;
+}
