@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <!-- Body Outline -->
+  <path fill="#1a1a24" d="M6 1h4v1h2v1h1v1h1v4h-1v2h-1v2h-2v1H6v-1H4v-2H3v-2H2V4h1V3h1V2h2V1z"/>
+  <!-- Pink Body -->
+  <path fill="#fca3b7" d="M6 2h4v1h2v1h1v4h-1v2h-1v1H5v-1H4V8H3V4h1V3h2V2z"/>
+  <!-- Eyes -->
+  <path fill="#1a1a24" d="M6 5h1v3H6zm3 0h1v3H9z"/>
+  <!-- Cheeks -->
+  <path fill="#e03870" d="M4 7h1v1H4zm7 0h1v1h-1z"/>
+  <!-- Red Feet -->
+  <path fill="#d92149" d="M3 11h4v2H3zm6 0h4v2H9z"/>
+  <!-- Arm stubs -->
+  <path fill="#fca3b7" d="M2 7h1v2H2zm11 0h1v2h-1z"/>
+</svg>
