@@ -12,27 +12,27 @@ A minimalist, text-focused digital garden built with Jekyll and typeset for read
 ```text
 rudraasthana.github.io/
 ├── _layouts/
-│   └── default.html         # Master template with theme toggle & footer
+│   ├── default.html         # Master template with theme toggle & footer
+│   └── post.html            # Post template with auto-generated titles & dates
 ├── _posts/
-│   ├── blog/              # Personal reflections and logs
-│   ├── guide/             # Technical and procedural manuals
-│   └── typeset/           # LaTeX-compiled document releases
+│   ├── blog/                # Personal reflections and logs
+│   ├── guide/               # Technical and procedural manuals
+│   └── typeset/             # LaTeX compiled document releases
 ├── assets/
-│   ├── img/               # Image assets and document thumbnails
-│   └── pdf/               # Downloadable compiled PDFs
+│   ├── img/                 # Image assets and document thumbnails
+│   └── pdf/                 # Downloadable compiled PDFs
 ├── _config.yml              # Jekyll settings & timezone enforcement
-├── favicon.svg              # 16x16 Pixel Art
 ├── index.html               # Homepage with dynamic category routing
 ├── LICENSE                  # GPLv3 text
 ├── README.md                # This file
-└── styles.css               # Catppuccin theme & typography limits
+└── styles.css               # High-contrast academic theme & typography limits
 ```
 
 ## Publishing Workflow
 
 ### 1. Standard Posts (Blog & Guides)
 
-Create a new Markdown file inside `_posts/blog/` or `_posts/guide/` using the `YYYY-MM-DD-title.md` format.
+Create a new Markdown file inside `_posts/blog/` or `_posts/guide/` using the strict `YYYY-MM-DD-title.md` format.
 
 ```yaml
 ---
@@ -42,17 +42,19 @@ category: blog # or "guide"
 ---
 ```
 
+_Note: Do not manually type `# Your Title` or the date at the top of your markdown body. The `post` layout automatically generates the `h1` heading and the "Date Published" line. Jekyll extracts the exact date entirely automatically directly from your `YYYY-MM-DD` filename._
+
 ### 2. Typeset Documents
 
 For LaTeX or PDF documents, the site uses a custom Document Card component for clean downloading.
 
 1. Place your compiled PDF into the `assets/pdf/` directory.
-2. Generate a thumbnail of the first page using Ghostscript:
+2. Generate a high-quality thumbnail of the first page using Ghostscript:
    ```bash
    \gs -o assets/img/your_file-thumb.jpg -sDEVICE=jpeg -dJPEGQ=85 -r150 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -dFirstPage=1 -dLastPage=1 assets/pdf/your_file.pdf
    ```
    _(Note: The backslash `\` ensures Zsh does not mistake `gs` for `git status`)._
-3. Create a post in `_posts/typeset/` using the standard naming convention, setting the front matter to `category: typeset`.
+3. Create a post in `_posts/typeset/` using the standard naming convention, setting the front matter to `category: typeset` and `layout: post`.
 4. Paste this HTML at the bottom of your post, updating the respective filenames:
    ```html
    <div class="document-card">
@@ -84,13 +86,20 @@ Here is a factual claim.[^1]
 [^1]: This is the citation or expanded thought.
 ```
 
-### 4. Format and Deploy
+## ⚠️ Future Reference & Formatting Gotchas
 
-Run Prettier to ensure all formatting remains perfectly aligned before deploying to GitHub Pages.
+### HTML inside Markdown
 
-```bash
-npx prettier --write "**/*.{html,css,md,yml}"
-git add .
-git commit -m "Publish: [Post Title]"
-git push
-```
+Markdown was fundamentally designed to be fully compatible with raw HTML. You can drop structural components (like the Document Card) directly into a `.md` file. However, Markdown parsers usually ignore Markdown syntax placed _inside_ raw block-level HTML tags. If you need to format text inside a `<div>`, use standard HTML tags like `<strong>` or `<em>` instead of `**` or `*`.
+
+### CSS Flexbox & Image Crushing
+
+By default, CSS Flexbox applies `flex-shrink: 1` to all children. If a flex container holds a long, unbroken string of text alongside an image, the browser will aggressively crush the image to make room for the text. This is prevented globally in `styles.css` using `flex-shrink: 0` and explicit `min-width` rules on thumbnails, coupled with `overflow-wrap: break-word` on text containers.
+
+### Sub-Pixel Anti-Aliasing
+
+Ghostscript renders text with jagged edges by default. Always include `-dTextAlphaBits=4` and `-dGraphicsAlphaBits=4` when extracting thumbnails from PDFs to force smooth font rendering. This is especially critical when dealing with complex LaTeX output.
+
+### Draft Status
+
+Jekyll ignores files unless their filenames strictly follow the `YYYY-MM-DD-title.md` format. To keep a post unpublished, you can simply remove the date from the filename or add `published: false` to the YAML front matter.
